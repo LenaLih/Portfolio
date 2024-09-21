@@ -9,22 +9,22 @@ return (
          <FooterList>
             <FooterItem>
                <FooterLink href="#">
-                  <Icone height={"35px"} width={"35px"} viewBox={"0 0 35px 35px"} iconId={"telegram"}/>
+                  <Icone height={"35px"} width={"35px"} viewBox={"0 0 35 35"} iconId={"telegram"}/>
                </FooterLink>
             </FooterItem>
             <FooterItem>
                <FooterLink href="#">
-                  <Icone height={"35px"} width={"35px"} viewBox={"0 0 35px 35px"} iconId={"linkedin"}/>
+                  <Icone height={"35px"} width={"35px"} viewBox={"0 0 35 35"} iconId={"linkedin"}/>
                </FooterLink>
             </FooterItem>
             <FooterItem>
                <FooterLink href="#">
-                  <Icone height={"35px"} width={"35px"} viewBox={"0 0 35px 35px"} iconId={"email"}/>
+                  <Icone height={"35px"} width={"35px"} viewBox={"0 0 35 35"} iconId={"email"}/>
                </FooterLink>
             </FooterItem>
             <FooterItem>
                <FooterLink href="#">
-                  <Icone height={"35px"} width={"35px"} viewBox={"0 0 35px 35px"} iconId={"whatsapp"}/>
+                  <Icone height={"35px"} width={"35px"} viewBox={"0 0 35 35"} iconId={"whatsapp"}/>
                </FooterLink>
             </FooterItem>
          </FooterList>

@@ -18,7 +18,7 @@ export const Contact = () => {
 
 const StyledContact = styled.section`
   min-height: 40vh;
-  background-color: #dacdcd;
+
 `;
 const StyledForm = styled.form`
   display: flex;

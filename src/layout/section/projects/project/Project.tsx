@@ -17,7 +17,7 @@ export const Project = (props: ProjectpropType) => {
          <Text>{props.text}</Text>
          <Stakc>{props.stakc}</Stakc>
          <LinkBox>
-            <Link href="#">github</Link>
+            <Link href="#">Посетить сайт</Link>
             <Link href="#">Посмотреть код</Link>
          </LinkBox>
       </InfoBox>

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Container } from "../../components/Container";
 import { Menu } from "../../components/menu/Menu";
+import { theme } from "../../style/Theme";
 
 export const Header = () => {
 return (
@@ -14,5 +15,11 @@ return (
 }
 
 const StyledHeader = styled.header`
-    background-color: honeydew;
+    background-color: ${theme.color.primaryBg};
+    padding: 30px 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
 `;

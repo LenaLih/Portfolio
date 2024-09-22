@@ -1,3 +1,4 @@
+import { theme } from './Theme';
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
@@ -12,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
 
 body {
    margin: 0;
-   font-family: "Lora", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+   font-family: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
    line-height: 1.2;
@@ -29,5 +30,8 @@ ul {
 button {
    background-color: unset;
    border: none;
+}
+section {
+   background-color: ${theme.color.primaryBg};
 }
 `;

@@ -26,7 +26,6 @@ const Name = styled.h2`
 `
 
 const Photo = styled.img`
-  border-radius: 5%;
   overflow: hidden;
   height: 350px;
   object-fit: cover;

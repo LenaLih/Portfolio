@@ -5,6 +5,7 @@ type FlexContainerPropsType = {
    justify?: string
    align?: string
    wrap?: string
+   gap?: string
 }
 
 export const FlexContainer = styled.div<FlexContainerPropsType>`
@@ -13,5 +14,6 @@ export const FlexContainer = styled.div<FlexContainerPropsType>`
    justify-content: ${props => props.justify || "flex-start"};
    align-items: ${props => props.align || "stretch"};
    flex-wrap: ${props => props.wrap || "nowrap"};
+   gap: ${props => props.gap || "0"};
    height: 100%;
 `

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { FlexContainer } from "../../components/FlexContainer";
 import { Icone } from "../../components/icon/Icon";
+import { theme } from "../../style/Theme";
 
 export const Footer = () => {
 return (
@@ -33,7 +34,8 @@ return (
 );
 }
 const StyledFooter = styled.footer`
-   background-color: #cfcfdb;
+   background-color: ${theme.color.primaryBg};
+   padding: 20px 0 40px;
   
 `
 const FooterList = styled.ul`

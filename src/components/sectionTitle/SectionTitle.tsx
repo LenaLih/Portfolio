@@ -1,5 +1,5 @@
-
 import styled from "styled-components";
+import { theme } from "../../style/Theme";
 
 type SectionTitlePropsType = {
   title?: string;
@@ -18,5 +18,15 @@ export const SectionTitle = (props: SectionTitlePropsType) => {
 const TitleBox = styled.div`
   text-align: center;
 `;
-const Title = styled.h2``;
-const SubTitle = styled.span``;
+const Title = styled.h2`
+font-weight: 700;
+font-size: 36px;
+color: ${theme.color.fond}
+`;
+const SubTitle = styled.span`
+  display: inline-block;
+  margin: 50px 0 140px;
+  font-weight: 400;
+font-size: 27px;
+color: ${theme.color.secanaryFond}
+`;

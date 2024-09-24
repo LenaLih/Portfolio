@@ -1,4 +1,4 @@
-import React from "react";
+
 import styled from "styled-components";
 import { Container } from "../../components/Container";
 import { Menu } from "../../components/menu/Menu";
@@ -16,7 +16,7 @@ return (
 
 const StyledHeader = styled.header`
     background-color: ${theme.color.primaryBg};
-    padding: 30px 0;
+    padding: 20px 0;
     position: fixed;
     left: 0;
     right: 0;

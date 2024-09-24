@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Container } from "../../../components/Container";
 import { FlexContainer } from "../../../components/FlexContainer";
 import { Icone } from "../../../components/icon/Icon";
 import { SectionTitle } from "../../../components/sectionTitle/SectionTitle";
@@ -6,8 +7,9 @@ import { SectionTitle } from "../../../components/sectionTitle/SectionTitle";
 export const Skills = () => {
   return (
     <StyledSkill>
-      <SectionTitle title={"Мой технический стег"} subtitle={"Технологии с каторыми я работаю"}/>
-      <FlexContainer wrap="wrap">
+      <Container>
+      <SectionTitle title={"My Skills"} subtitle={" Technologies I’ve been working with recently"}/>
+      <FlexContainer wrap="wrap" justify="space-between" gap="70px">
         <Icone iconId={"html"} />
         <Icone iconId={"css"} />
         <Icone iconId={"js"} />
@@ -21,6 +23,7 @@ export const Skills = () => {
         <Icone iconId={"styledComponent"} />
         <Icone iconId={"vscode"} />
       </FlexContainer>
+      </Container>
     </StyledSkill>
   );
 }

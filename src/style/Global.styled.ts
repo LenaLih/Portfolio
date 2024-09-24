@@ -33,5 +33,16 @@ button {
 }
 section {
    background-color: ${theme.color.primaryBg};
+   padding: 80px 0;
+}
+h3 {
+   font-weight: 500;
+   font-size: 28px;
+   color: ${theme.color.fond};
+}
+p {
+font-weight: 300;
+font-size: 18px;
+color: ${theme.color.secanaryFond};
 }
 `;

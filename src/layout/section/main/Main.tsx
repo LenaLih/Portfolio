@@ -26,20 +26,26 @@ const StyledMain = styled.div`
   background-color: ${theme.color.primaryBg};
   min-height: 100vh;
   display: flex;
+  color: ${theme.color.fond}
 `;
 const SmallText = styled.span`
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 40px;
+  font-weight: 600;
+  
 `;
 const Name = styled.h2`
-  font-size: 45px;
-  font-weight: 700;
+  font-size: 35px;
+  font-weight: 600;
   letter-spacing: 0.05em;
   margin: 10px 0;
 `;
 const MainTitle = styled.h1`
-  font-size: 27px;
-  font-weight: 400;
+  font-size: 45px;
+  font-weight: 600;
+  background: ${theme.color.aczentColor};
+  background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 `;
 const Photo = styled.img`
   overflow: hidden;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../style/Theme";
 
 export const Menu = () => {
   return (
@@ -30,16 +31,18 @@ const StyledMenu = styled.nav`
   }
 `;
 const ListItem = styled.li`
-  :hover {
+  transition: all 1s;
+  &:hover {
     border-top: solid 2px;
     border-bottom: solid 2px;
     letter-spacing: 0.5em;
     transition: 1s;
+    color: ${theme.color.fond};
   }
 `;
 
 const Link = styled.a`
   font-size: 20px;
   font-weight: 500;
-  
+  color: ${theme.color.fond};
 `;

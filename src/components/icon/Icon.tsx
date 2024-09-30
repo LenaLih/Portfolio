@@ -8,7 +8,7 @@ type IconPropsType = {
   viewBox?: string;
 };
 
-export const Icone = (props: IconPropsType) => {
+export const Icon = (props: IconPropsType) => {
   return (
     <svg
       width={props.width || "117px"}

@@ -8,12 +8,13 @@ export const Contact = () => {
   return (
     <StyledContact>
       <Container>
-        <SectionTitle title={'Contact'} />
+        <SectionTitle title={'{ Contact }'} 
+        subtitle={'If you have any questions'}/>
         <StyledForm>
           <Field placeholder={'Name'} />
-          <Field placeholder={'Имя'} />
+          <Field placeholder={'Email'} />
           <Field as={'textarea'} placeholder={'Message'} />
-          <Button title={'Отправить'} />
+          <Button title={'Send'} />
         </StyledForm>
       </Container>
     </StyledContact>
@@ -26,26 +27,26 @@ const StyledForm = styled.form`
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  max-width: 540px;
+  max-width: 600px;
   width: 100%;
   margin: 0 auto;
 
   textarea {
     resize: none;
-    height: 155px;
+    height: 150px;
   }
 `;
 
 const Field = styled.input`
   width: 100%;
   padding: 7px 15px;
-  font-family: 'Poppins';
-  font-size: 12px;
+  border-radius: 15px;
+  font-family: ${theme.font.fontText};
+  font-size: 17px;
   font-weight: 400;
-  color: ${theme.color.fond};
+  color: ${theme.color.primaryBg};
 
   &::placeholder {
-    color: ${theme.color.placeholder};
     text-transform: capitalize;
   }
 `;

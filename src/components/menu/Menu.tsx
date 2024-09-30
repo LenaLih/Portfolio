@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { theme } from "../../style/Theme";
+import styled from 'styled-components';
+import { theme } from '../../style/Theme';
 
 export const Menu = () => {
   return (
@@ -23,26 +23,30 @@ export const Menu = () => {
 };
 
 const StyledMenu = styled.nav`
+
   ul {
     display: flex;
     gap: 30px;
-    justify-content: end;
-    margin-right: 30px;
+    justify-content: center;
   }
-`;
-const ListItem = styled.li`
-  transition: all 1s;
-  &:hover {
-    border-top: solid 2px;
-    border-bottom: solid 2px;
-    letter-spacing: 0.5em;
-    transition: 1s;
-    color: ${theme.color.fond};
+
+  @media ${theme.media.tablet} {
+    display: none;
   }
 `;
 
+const ListItem = styled.li``;
+
 const Link = styled.a`
+  transition: all 1s;
+  border: 1px solid ${theme.color.aczentFond};
+  padding: 6px 10px;
+  border-radius: 15px;
   font-size: 20px;
-  font-weight: 500;
-  color: ${theme.color.fond};
+  font-weight: 300;
+  color: ${theme.color.aczentFond};
+  &:hover {
+    background-color: ${theme.color.aczentFond};
+    color: ${theme.color.fond};
+  }
 `;

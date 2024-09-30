@@ -4,16 +4,18 @@ import { SectionTitle } from '../../../components/sectionTitle/SectionTitle';
 import { Project } from './project/Project';
 import projectImg from '../../../assets/imagesProject/project.png';
 import { Container } from '../../../components/Container';
+import decor from '../../../assets/Decors/star.png'
+import { Decor } from '../../../components/decor/Decor'
 
 export const Projects = () => {
   return (
     <StyledProjects>
       <Container>
         <SectionTitle
-          title={'Projects'}
+          title={'{ Projects }'}
           subtitle={'Things I’ve built so far'}
         />
-        <FlexContainer wrap={'wrap'} justify={'space-between'}>
+        <FlexContainer wrap={'wrap'} justify={'space-between'} gap={'20px'}>
           <Project
             title={'Project Tile goes here'}
             text={
@@ -41,10 +43,15 @@ export const Projects = () => {
             skill={'HTML, JavaScript, SASS, React'}
             src={projectImg}
           />
+          <Decor src={decor} top={'-35px'} right={'-150px'}/>
         </FlexContainer>
       </Container>
     </StyledProjects>
   );
 };
 
-const StyledProjects = styled.section``;
+const StyledProjects = styled.section`
+
+`;
+
+

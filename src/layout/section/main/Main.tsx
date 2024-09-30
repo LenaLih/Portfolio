@@ -1,20 +1,36 @@
-import React from "react";
-import styled from "styled-components";
-import photo from "../../../assets/images/Photo.webp";
-import { Container } from "../../../components/Container";
-import { FlexContainer } from "../../../components/FlexContainer";
-import { theme } from "../../../style/Theme";
+import styled from 'styled-components';
+import photo from '../../../assets/images/Photo.webp';
+import { Container } from '../../../components/Container';
+import { FlexContainer } from '../../../components/FlexContainer';
+import { theme } from '../../../style/Theme';
+import Typewriter from 'typewriter-effect';
+
 
 export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexContainer align={"center"} justify={"space-between"}>
-          <div>
-            <SmallText>Hi,</SmallText>
-            <Name>I am Elena Likhosherstova</Name>
-            <MainTitle>Front-end developer</MainTitle>
-          </div>
+        <FlexContainer align={'center'} justify={'space-between'} wrap={'wrap'}>
+          <MainTitleWrapper>
+            <MainTitle>
+              <p>Front-end developer</p>
+              <Typewriter
+                options={{
+                  strings: ['Front-end developer'],
+                  autoStart: true,
+                  loop: true,
+                  delay: 150
+                }}
+              />
+            </MainTitle>
+            <SmallText>Hi, I am</SmallText>
+            <Name>Elena Likhosherstova</Name>
+            <Description>
+              Short text with details about you, what you do or your
+              professional career. You can add more information on the about
+              page.
+            </Description>
+          </MainTitleWrapper>
           <Photo src={photo} />
         </FlexContainer>
       </Container>
@@ -26,30 +42,42 @@ const StyledMain = styled.div`
   background-color: ${theme.color.primaryBg};
   min-height: 100vh;
   display: flex;
-  color: ${theme.color.fond}
+  color: ${theme.color.fond};
 `;
-const SmallText = styled.span`
+
+const MainTitleWrapper = styled.div`
   font-size: 40px;
-  font-weight: 600;
-  
+  font-weight: 400;
+  line-height: 1.5;
 `;
+const SmallText = styled.span``;
 const Name = styled.h2`
-  font-size: 35px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  margin: 10px 0;
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 10px;
 `;
 const MainTitle = styled.h1`
-  font-size: 45px;
-  font-weight: 600;
-  background: ${theme.color.aczentColor};
-  background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+  font-size: 40px;
+  font-weight: 700;
+  color: ${theme.color.aczentFond};
+  p {
+  display: none;
+  }
 `;
+const Description = styled.p`
+  max-width: 440px;
+  font-size: 19px;
+  color: ${theme.color.fond};
+`;
+
 const Photo = styled.img`
-  overflow: hidden;
-  height: 350px;
+  /* overflow: hidden; */
   object-fit: cover;
-  box-shadow: 15px 15px 15px 0 grey;
+  width: 550px;
+  height: 550px;
+
+  @media ${theme.media.mobile} {
+    width: 350px;
+  }
+
 `;

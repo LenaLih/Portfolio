@@ -6,6 +6,7 @@ type FlexContainerPropsType = {
    align?: string
    wrap?: string
    gap?: string
+   position?: string
 }
 
 export const FlexContainer = styled.div<FlexContainerPropsType>`

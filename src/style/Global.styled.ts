@@ -1,5 +1,5 @@
 import { theme } from './Theme';
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
 *,
@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
 
 body {
    margin: 0;
-   font-family: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+   font-family: "JetBrains Mono", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
    line-height: 1.2;
@@ -41,8 +41,9 @@ h3 {
    color: ${theme.color.fond};
 }
 p {
-font-weight: 300;
-font-size: 18px;
-color: ${theme.color.secanaryFond};
+   font-family: ${theme.font.fontText};
+   font-size: 15px;
+   font-weight: 400;
+   color: ${theme.color.primaryBg};
 }
 `;

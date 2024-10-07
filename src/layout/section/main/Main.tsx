@@ -42,8 +42,10 @@ export const Main = () => {
 const StyledMain = styled.div`
   background-color: ${theme.color.primaryBg};
   min-height: 100vh;
+  padding: 130px 0 0;
   display: flex;
   color: ${theme.color.fond};
+
 `;
 
 const MainTitleWrapper = styled.div`

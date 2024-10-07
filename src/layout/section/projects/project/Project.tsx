@@ -32,7 +32,7 @@ export const Project = (props: ProjectpropType) => {
 
 const StyledProject = styled.div`
   background-color: ${theme.color.fond};
-  width: 350px;
+  width: 300px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;

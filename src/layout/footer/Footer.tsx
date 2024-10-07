@@ -60,24 +60,35 @@ export const Footer = () => {
 const StyledFooter = styled.footer`
   background-color: ${theme.color.primaryBg};
   padding: 100px 0 60px;
-  position: relative;
+  overflow: hidden;
 
-  ::before {
+  ${FlexContainer} {
+    position: relative;
+    ::before {
     content: "";
+    display: block;
     background-image: url(${decorImage});
     background-position:  50% 45%;
     position: absolute;
     width: 400px;
     height: 250px;
-    top: 0px;
+    top: -100px;
     left: 0px;
+
+    @media ${theme.media.tablet} {
+    display: none;
   }
+  }
+  }
+
+  
 `;
 const FooterList = styled.ul`
   display: flex;
   gap: 50px;
+  z-index: 99;
 `;
 const FooterItem = styled.li``;
 const FooterLink = styled.a`
-z-index: 99;
+
 `;

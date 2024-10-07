@@ -5,6 +5,7 @@ import { Project } from './project/Project';
 import projectImg from '../../../assets/imagesProject/project.png';
 import { Container } from '../../../components/Container';
 import decorImage from '../../../assets/decors/star.png'
+import { theme } from '../../../style/Theme';
 
 
 export const Projects = () => {
@@ -50,15 +51,24 @@ export const Projects = () => {
 };
 
 const StyledProjects = styled.section`
-  position: relative; 
+  overflow: hidden;
   
-  ::before {
+  ${FlexContainer} {
+    position: relative;
+    ::after {
     position: absolute;
+    display: block;
     content: "";
     background-image: url(${decorImage});
     width: 370px;
     height: 370px; 
-    right: 170px;
+    right: -150px;
+    bottom: 350px;
+
+    @media ${theme.media.tablet} {
+    display: none;
+  }
+  }
   }
 
 `;

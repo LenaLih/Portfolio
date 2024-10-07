@@ -3,10 +3,12 @@ import { SectionTitle } from '../../../components/sectionTitle/SectionTitle';
 import { Button } from '../../../components/button/Button';
 import { Container } from '../../../components/Container';
 import { theme } from '../../../style/Theme';
+import { Decor } from '../../../components/decor/Decor';
+import decor from '../../../assets/Decors/arrows(2).png';
 
 export const Contact = () => {
   return (
-    <StyledContact>
+    <StyledContact id={"contact"}>
       <Container>
         <SectionTitle title={'{ Contact }'} 
         subtitle={'If you have any questions'}/>
@@ -16,6 +18,7 @@ export const Contact = () => {
           <Field as={'textarea'} placeholder={'Message'} />
           <Button title={'Send'} />
         </StyledForm>
+        {/* <Decor src={decor} bottom={'0'} right={'100px'}/> */}
       </Container>
     </StyledContact>
   );

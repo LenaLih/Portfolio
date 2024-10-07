@@ -2,19 +2,38 @@ import styled from 'styled-components';
 import { Container } from '../../components/Container';
 import { FlexContainer } from '../../components/FlexContainer';
 import { Logo } from '../../components/logo/Logo';
-import { Menu } from '../../components/menu/Menu';
+import { DesktopMenu } from './desktopmenu/DesktopMenu';
 import { theme } from '../../style/Theme';
 import { MobileMenu } from './mobileMenu/MobileMenu';
 
+const items = [
+  {
+    title: 'Home',
+    href: 'home'
+  },
+  {
+    title: 'Skills',
+    href: 'skills'
+  },
+  {
+    title: 'Projects',
+    href: 'projects'
+  },
+  {
+    title: 'Contact',
+    href: 'contact'
+  }
+];
+
 export const Header = () => {
-return (
+  return (
     <StyledHeader>
-        <Container>
-            <FlexContainer justify={'space-between'} align={'center'}>
+      <Container>
+        <FlexContainer justify={'space-between'} align={'center'}>
           <Logo />
-          <Menu />
+          <DesktopMenu items={items} />
           <LinkWrite href="">Write me</LinkWrite>
-          <MobileMenu/>
+          <MobileMenu items={items} />
         </FlexContainer>
       </Container>
     </StyledHeader>
@@ -36,6 +55,7 @@ const LinkWrite = styled.a`
   font-size: 20px;
   font-weight: 300;
   text-decoration: underline;
+  z-index: 99999;
   &:hover {
     color: ${theme.color.fond};
   }

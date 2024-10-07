@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { font } from '../../style/Common';
 import { theme } from '../../style/Theme';
 
 type SectionTitlePropsType = {
@@ -21,14 +22,10 @@ position: relative;
   z-index: 99;
 `;
 const Title = styled.h2`
-  font-weight: 700;
-  font-size: 30px;
-  color: ${theme.color.fond};
+  ${font({weight: 700, color: theme.color.fond, Fmax: 30, Fmin: 25})}
 `;
 const SubTitle = styled.span`
+${font({weight: 400, color: theme.color.aczentFond, Fmax: 27, Fmin: 23})}
   display: inline-block;
   margin: 50px 0 75px;
-  font-weight: 400;
-  font-size: 27px;
-  color: ${theme.color.aczentFond};
 `;

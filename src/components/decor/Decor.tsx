@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { theme } from '../../style/Theme';
 
 type DecorPropsType = {
   src: string;
@@ -21,5 +22,10 @@ const DecorImg = styled.img<DecorPropsType>`
   right: ${(props) => props.right || 'auto'};
   left: ${(props) => props.left || 'auto'};
   bottom: ${(props) => props.bottom || 'auto'};
-  height: 400px;
+  width: 350px;
+
+  @media ${theme.media.tablet} {
+    display: none;
+  }
+
 `;

@@ -4,15 +4,14 @@ import { Decor } from "../../../components/decor/Decor";
 import { FlexContainer } from "../../../components/FlexContainer";
 import { Icon } from "../../../components/icon/Icon";
 import { SectionTitle } from "../../../components/sectionTitle/SectionTitle";
-import decor from "../../../assets/Decors/arrow (1).png";
+import decor from "../../../assets/decors/arrow (1).png";
 
 export const Skills = () => {
   return (
-    <StyledSkill>
+    <StyledSkills id={'skills'}>
       <Container>
-      <Decor src={decor} top={'-230px'} left={'-170px'}/>
       <SectionTitle title={"{ My skills }"} subtitle={" Technologies I’ve been working with recently"}/>
-      <FlexContainer wrap="wrap" justify="space-between" gap="70px">
+      <FlexContainer wrap="wrap" justify="space-between" gap="50px">
         <Icon iconId={"html"} />
         <Icon iconId={"css"} />
         <Icon iconId={"js"} />
@@ -25,12 +24,13 @@ export const Skills = () => {
         <Icon iconId={"figma"} />
         <Icon iconId={"styledComponent"} />
         <Icon iconId={"vscode"} />
+        <Decor src={decor} bottom={'200px'} left={'-150px'}/>
       </FlexContainer>
       </Container>
-    </StyledSkill>
+    </StyledSkills>
   );
 }
 
-const StyledSkill = styled.section`
+const StyledSkills = styled.section`
 
 `

@@ -4,13 +4,14 @@ import { Container } from '../../../components/Container';
 import { FlexContainer } from '../../../components/FlexContainer';
 import { theme } from '../../../style/Theme';
 import Typewriter from 'typewriter-effect';
+import { font } from '../../../style/Common';
 
 
 export const Main = () => {
   return (
-    <StyledMain>
+    <StyledMain id={'home'}>
       <Container>
-        <FlexContainer align={'center'} justify={'space-between'} wrap={'wrap'}>
+        <FlexContainer align={'center'} justify={'space-around'} wrap={'wrap'}>
           <MainTitleWrapper>
             <MainTitle>
               <p>Front-end developer</p>
@@ -46,19 +47,15 @@ const StyledMain = styled.div`
 `;
 
 const MainTitleWrapper = styled.div`
-  font-size: 40px;
-  font-weight: 400;
-  line-height: 1.5;
+  ${font({weight: 400, lineHeight: 1.5, Fmax: 40, Fmin: 28})}
 `;
 const SmallText = styled.span``;
 const Name = styled.h2`
-  font-size: 40px;
-  font-weight: 400;
+${font({weight: 400, lineHeight: 1.5, Fmax: 40, Fmin: 28})}
   margin-bottom: 10px;
 `;
 const MainTitle = styled.h1`
-  font-size: 40px;
-  font-weight: 700;
+${font({weight: 700, lineHeight: 1.5, Fmax: 40, Fmin: 28})}
   color: ${theme.color.aczentFond};
   p {
   display: none;
@@ -71,13 +68,13 @@ const Description = styled.p`
 `;
 
 const Photo = styled.img`
-  /* overflow: hidden; */
+  overflow: hidden;
   object-fit: cover;
-  width: 550px;
-  height: 550px;
+  width: 500px;
+
 
   @media ${theme.media.mobile} {
-    width: 350px;
+    width: 380px;
   }
 
 `;

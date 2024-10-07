@@ -4,12 +4,12 @@ import { SectionTitle } from '../../../components/sectionTitle/SectionTitle';
 import { Project } from './project/Project';
 import projectImg from '../../../assets/imagesProject/project.png';
 import { Container } from '../../../components/Container';
-import decor from '../../../assets/Decors/star.png'
-import { Decor } from '../../../components/decor/Decor'
+import decorImage from '../../../assets/decors/star.png'
+
 
 export const Projects = () => {
   return (
-    <StyledProjects>
+    <StyledProjects id={'projects'}>
       <Container>
         <SectionTitle
           title={'{ Projects }'}
@@ -43,7 +43,6 @@ export const Projects = () => {
             skill={'HTML, JavaScript, SASS, React'}
             src={projectImg}
           />
-          <Decor src={decor} top={'-35px'} right={'-150px'}/>
         </FlexContainer>
       </Container>
     </StyledProjects>
@@ -51,6 +50,16 @@ export const Projects = () => {
 };
 
 const StyledProjects = styled.section`
+  position: relative; 
+  
+  ::before {
+    position: absolute;
+    content: "";
+    background-image: url(${decorImage});
+    width: 370px;
+    height: 370px; 
+    right: 170px;
+  }
 
 `;
 

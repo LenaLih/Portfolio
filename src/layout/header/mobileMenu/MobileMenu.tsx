@@ -1,18 +1,37 @@
+import { useState } from 'react';
 import styled, { css } from 'styled-components';
 import { theme } from '../../../style/Theme';
+import { Link } from 'react-scroll';
 
-type MobileMenuPropsType = {
-  isOpen?: boolean
+
+
+type MobileMenuProps = {
+  items: { title: string; href: string }[]; 
 }
-export const MobileMenu = (props:MobileMenuPropsType) => {
+
+export const MobileMenu = ({items}: MobileMenuProps) => {
+  const [menuIsOpen, setmenuIsOpen] = useState(false)
+  const onBurgerBtnClick = () => setmenuIsOpen(!menuIsOpen)
   return (
     <StyledMobileMenu>
-      <BurgerButton isOpen={false}>
+      <BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
         <span></span>
       </BurgerButton>
-      <MobileMenuPopup isOpen={false}>
+      <MobileMenuPopup isOpen={menuIsOpen} onClick={ () => {setmenuIsOpen(false)}}>
         <ul>
-          <ListItem>
+        {items.map((item, index) => {
+          return (
+            <ListItem key={index}>
+              <NavLink onClick={ () => {setmenuIsOpen(false)}}
+                activeClass="active"
+                to={item.href}
+                smooth={true}
+                spy={true}
+              >{item.title}</NavLink>
+            </ListItem>
+          );
+        })}
+          {/* <ListItem>
             <Link href="">Home</Link>
           </ListItem>
           <ListItem>
@@ -23,27 +42,30 @@ export const MobileMenu = (props:MobileMenuPropsType) => {
           </ListItem>
           <ListItem>
             <Link href="">Contact</Link>
-          </ListItem>
+          </ListItem> */}
         </ul>
       </MobileMenuPopup>
     </StyledMobileMenu>
   );
 };
 
-const StyledMobileMenu = styled.nav``;
+const StyledMobileMenu = styled.nav`
+  display: none;
+
+  @media ${theme.media.tablet} {
+    display: block;
+  }
+`;
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
-display: none;
   position: fixed;
-  right: 150px;
+  right: 0px;
   top: 40px;
   width: 70px;
   height: 70px;
-  z-index: 9999;
+  z-index: 99999;
 
-  @media ${theme.media.tablet} {
-    display: flex;
-  }
+
   span {
     position: absolute;
     display: block;
@@ -69,9 +91,9 @@ display: none;
       transform: translateY(10px);
     }
   }
-  ${({ isOpen }) =>
-    isOpen &&
-    css`
+  ${(props) =>
+    props.isOpen &&
+    css<{ isOpen: boolean }>`
       span {
         background-color: transparent;
 
@@ -94,10 +116,15 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   left: 0;
   background-color: ${theme.color.primaryBg};
   z-index: 999;
-  display: ${ props  => (props.isOpen ? 'flex' : 'none')};
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: none;
+
+  ${(props) =>
+    props.isOpen &&
+    css<{ isOpen: boolean }>`
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    `}
 
   ul {
     display: flex;
@@ -109,7 +136,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
 `;
 const ListItem = styled.li``;
 
-const Link = styled.a`
+const NavLink = styled(Link)`
   transition: all 1s;
   border: 1px solid ${theme.color.aczentFond};
   padding: 6px 10px;

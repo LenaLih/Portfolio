@@ -17,4 +17,5 @@ export const FlexContainer = styled.div<FlexContainerPropsType>`
    flex-wrap: ${props => props.wrap || "nowrap"};
    gap: ${props => props.gap || "0"};
    height: 100%;
+   position: relative;
 `
